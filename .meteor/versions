@@ -76,7 +76,6 @@ routepolicy@1.0.7-modules.4
 service-configuration@1.0.6-modules.4
 session@1.1.2-modules.4
 sha@1.0.4
-softwarerero:accounts-t9n@1.1.7
 spacebars@1.0.8-modules.4
 spacebars-compiler@1.0.8-modules.4
 srp@1.0.5-modules.4
@@ -91,7 +90,5 @@ twbs:bootstrap@3.3.6
 ui@1.0.8
 underscore@1.0.5-modules.4
 url@1.0.6-modules.4
-useraccounts:bootstrap@1.13.1
-useraccounts:core@1.13.1
 webapp@1.2.4-modules.4
 webapp-hashing@1.0.6-modules.4

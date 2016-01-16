@@ -23,6 +23,5 @@ check
 random
 twbs:bootstrap
 fortawesome:fontawesome
-useraccounts:bootstrap
 thereactivestack:blazetoreact
 accounts-password
