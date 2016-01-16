@@ -21,3 +21,5 @@ reactive-dict
 audit-argument-checks
 check
 random
+twbs:bootstrap
+fortawesome:fontawesome
