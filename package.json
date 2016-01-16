@@ -32,6 +32,7 @@
     "react-komposer": "1.x.x",
     "react-simple-di": "1.x.x",
     "react-mounter": "1.x.x"
+    ,"classnames": "2.2.1"
   },
   "private": true
 }
