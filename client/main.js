@@ -11,9 +11,14 @@ import actions from './actionsCombined.js';
 import initRoutesHome from './modules/_home/routesFR.jsx';
 import initRoutesUsers from './modules/_users/routesFR.jsx';
 import initRoutesColors from './modules/colors/routesFR.jsx';
-import initRoutesInspinia from './modules/inspinia/routesFR.jsx';
 
-import Layout from '/client/modules/inspinia/components/Layout.jsx';
+// import initRoutesInspinia from './modules/inspinia/routesFR.jsx';
+import initRoutesAdminLTE from './modules/AdminLTE/routesFR.jsx';
+
+// import Layout from '/client/components/layouts.main/index.jsx';
+// import Layout from '/client/modules/_home/components/Layout/JustContent.jsx';
+import Layout from '/client/modules/AdminLTE/components/Layout.jsx';
+// import Layout from '/client/modules/inspinia/components/Layout.jsx';
 
 loadMethodStubs();
 const context = initContext();
@@ -23,3 +28,5 @@ initRoutes(LayoutCtx);
 initRoutesHome(LayoutCtx);
 initRoutesUsers(LayoutCtx);
 initRoutesColors(LayoutCtx);
+// initRoutesInspinia(LayoutCtx);
+initRoutesAdminLTE(LayoutCtx);
