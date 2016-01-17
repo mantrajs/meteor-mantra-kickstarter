@@ -3,21 +3,16 @@ import React from 'react';
 import {FlowRouter} from 'meteor/kadira:flow-router';
 import {mount} from 'react-mounter';
 
-// import Layout from '/client/modules/inspinia/components/Layout.jsx';
-// import Links from '/client/modules/inspinia/components/Links.jsx';
+import Links from './components/Links/Links.jsx';
 
-import Links from '/client/modules/_home/components/Links.jsx';
+import Simple from './components/Simple/Simple.jsx';
 
-import Simple from '/client/modules/_home/components/Simple.jsx';
-import LoginForm from '/client/modules/_home/components/LoginForm.jsx';
-
-import ColorsCollection from '/client/modules/_home/containers/ColorsCollection.jsx';
-import ColorsNew from '/client/modules/_home/containers/ColorsNew.jsx';
-import ColorsSingle from '/client/modules/_home/containers/ColorsSingle.jsx';
+import TestWithComposer from './components/Prototypes/TestWithComposer.jsx';
+import TestForm from './components/Prototypes/TestForm.jsx';
 
 // import Test from '/client/modules/_home/containers/Test.jsx';
 
-export const initRoutesHome = (Layout) => {
+export default (Layout) => {
 
   // const LayoutCtx = injectDeps(context, actions)(Layout)
 
@@ -25,14 +20,16 @@ export const initRoutesHome = (Layout) => {
     name: 'home',
     action() {
       mount(Layout, {
-        content: () => (<Simple />),
+        content: () => (<Simple name='home container'/>),
         links: () => (<Links />)
       });
     }
   });
 
-  FlowRouter.route('/register', {
-    name: 'home',
+  /// Prototypes
+
+  FlowRouter.route('/loginworking', {
+    name: 'user.login.working',
     action() {
       mount(Layout, {
         content: () => (<Simple />),
@@ -41,45 +38,28 @@ export const initRoutesHome = (Layout) => {
     }
   });
 
-  FlowRouter.route('/login', {
-    name: 'home',
+  FlowRouter.route('/prototypes/form', {
+    name: 'test.form',
     action() {
       mount(Layout, {
-        content: () => (<LoginForm/>),
+        content: () => (<TestForm />),
         links: () => (<Links />)
       });
     }
   });
 
-  FlowRouter.route('/colors', {
-    name: 'colors.collection',
+  FlowRouter.route('/prototypes/composer', {
+    name: 'test.composer',
     action() {
       mount(Layout, {
-        content: () => (<ColorsCollection />),
+        content: () => (<TestWithComposer />),
         links: () => (<Links />)
       });
     }
   });
 
-  FlowRouter.route('/colors/new', {
-    name: 'colors.new',
-    action() {
-      mount(Layout, {
-        content: () => (<ColorsNew />),
-        links: () => (<Links />)
-      });
-    }
-  });
 
-  FlowRouter.route('/colors/:_Id', {
-    name: 'colors.single',
-    action({_Id}) {
-      mount(Layout, {
-        content: () => (<ColorsSingle _Id={_Id}/>),
-        links: () => (<Links />)
-      });
-    }
-  });
+
 
 
 };
