@@ -20,12 +20,21 @@ export default (Layout) => {
     name: 'home',
     action() {
       mount(Layout, {
-        content: () => (<Simple name='home container'/>),
+        content: () => (<Simple name='/approot'/>),
         links: () => (<Links />)
       });
     }
   });
 
+  FlowRouter.route('/home', {
+    name: 'home',
+    action() {
+      mount(Layout, {
+        content: () => (<Simple name='home container'/>),
+        links: () => (<Links />)
+      });
+    }
+  });
 
 
 
