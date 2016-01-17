@@ -24,7 +24,7 @@ loadMethodStubs();
 const context = initContext();
 const LayoutCtx = injectDeps(context, actions)(Layout);
 
-initRoutes(LayoutCtx);
+// initRoutes(LayoutCtx);
 initRoutesHome(LayoutCtx);
 initRoutesUsers(LayoutCtx);
 initRoutesColors(LayoutCtx);
