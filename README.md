@@ -15,6 +15,13 @@ Please make sure you read [Mantra Specification](https://kadirahq.github.io/mant
 * A theme module based on the [AdminLTE Control Panel Template] (https://almsaeedstudio.com/), you can replace it or remove if you have other requirements
 * basic CRUD operations on a simple "Colors" module
 
+
+![screen login](public/screens/screen-login.png)
+
+![screen register](public/screens/screen-register.png)
+
+![screen theme](public/screens/screen-theme.png)
+
 ### Setting Up
 
 * Make sure you've installed Meteor locally
@@ -22,7 +29,7 @@ Please make sure you read [Mantra Specification](https://kadirahq.github.io/mant
 
 ```
 npm install
-meeor --port 5005
+meteor --port 5005
 ```
 Your app should be running [http://localhost:5005](http://localhost:5005)
 
