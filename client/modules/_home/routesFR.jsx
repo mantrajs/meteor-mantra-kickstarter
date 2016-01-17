@@ -16,7 +16,7 @@ export default (Layout) => {
 
   // const LayoutCtx = injectDeps(context, actions)(Layout)
 
-  FlowRouter.route('/home', {
+  FlowRouter.route('/', {
     name: 'home',
     action() {
       mount(Layout, {
@@ -26,37 +26,6 @@ export default (Layout) => {
     }
   });
 
-  /// Prototypes
-
-  FlowRouter.route('/loginworking', {
-    name: 'user.login.working',
-    action() {
-      mount(Layout, {
-        content: () => (<Simple />),
-        links: () => (<Links />)
-      });
-    }
-  });
-
-  FlowRouter.route('/prototypes/form', {
-    name: 'test.form',
-    action() {
-      mount(Layout, {
-        content: () => (<TestForm />),
-        links: () => (<Links />)
-      });
-    }
-  });
-
-  FlowRouter.route('/prototypes/composer', {
-    name: 'test.composer',
-    action() {
-      mount(Layout, {
-        content: () => (<TestWithComposer />),
-        links: () => (<Links />)
-      });
-    }
-  });
 
 
 

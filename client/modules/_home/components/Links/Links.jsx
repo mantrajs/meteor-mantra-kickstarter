@@ -6,15 +6,9 @@ import Dropdown from '../../../AdminLTE/components/Dropdown.jsx';
 export default () => {
 
   var links = [];
-  links.push({url:'/', name: 'Start'});
+  links.push({url:'/', name: '/Start'});
   links.push( {url:'/home', name: '/home'} );
-  links.push( {url:'/inspinia', name: 'Inspinia'} );
-  links.push( {url:'/posts', name: 'Posts'} );
-  links.push( {url:'/new-post', name: 'New post'} );
-  links.push( {url:'/home', name: '/home'} );
-  // links.push ( {url:'/account', name: 'Account'} );
-  // links.push ( {url:'/logout', name: 'Logout'} );
-  let navStart = React.createElement(Dropdown, {name: 'Start home!!@', links: links});
+  let navStart = React.createElement(Dropdown, {name: 'Start', links: links});
 
   var links = [];
   links.push( {url:'/colors', name: '/colors'} );
@@ -34,13 +28,21 @@ export default () => {
   let navBlaze = React.createElement(Dropdown, {name: 'Accounts', links: links});
 
 
+  var links = [];
+  links.push( {url:'/adminlte/notifications', name: 'Notifications'} );
+
+  let navTheme = React.createElement(Dropdown, {name: 'Theme', links: links});
+
+
+
   return (
     <ul className="nav navbar-nav">
 
       { navStart }
       { navColor }
       { navBlaze }
-
+      { navTheme }
+      
     </ul>
   );
 };
