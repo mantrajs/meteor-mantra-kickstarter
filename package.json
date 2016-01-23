@@ -34,6 +34,12 @@
     "react-komposer": "1.x.x",
     "react-simple-di": "1.x.x",
     "react-mounter": "1.x.x"
+
+    ,"classnames": "2.2.1"
+    ,"lodash":"3.10.1"
+    ,"formsy-react": "0.17.0"
+    ,"formsy-react-components": "0.6.6"
+
   },
   "private": true
 }
