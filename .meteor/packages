@@ -24,3 +24,9 @@ random
 twbs:bootstrap
 fortawesome:fontawesome
 accounts-password
+percolate:find-from-publication
+reywood:publish-composite
+jagi:astronomy
+jagi:astronomy-slug-behavior
+jagi:astronomy-timestamp-behavior
+jagi:astronomy-validators
