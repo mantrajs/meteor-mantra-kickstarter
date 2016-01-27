@@ -1,4 +1,4 @@
-import LoginForm from '../components/Register/RegisterForm.jsx';
+import RegisterForm from '../components/Register/RegisterForm.jsx';
 import {useDeps} from 'react-simple-di';
 import {composeWithTracker, composeAll} from 'react-komposer';
 
@@ -20,4 +20,4 @@ export const depsMapper = (context, actions) => ({
 export default composeAll(
   composeWithTracker(composer),
   useDeps(depsMapper)
-)(LoginForm);
+)(RegisterForm);
