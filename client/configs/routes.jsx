@@ -11,7 +11,7 @@ export default function (injectDeps) {
   const MainLayoutCtx = injectDeps(MainLayout);
 
   // Move these as a module and call this from a main file
-  FlowRouter.route('/', {
+  FlowRouter.route('/posts', {
     name: 'posts.list',
     action() {
       mount(MainLayoutCtx, {
