@@ -5,7 +5,7 @@ import Navheader from './navheader.jsx';
 
 export default class extends React.Component {
 
-  render () {
+  render() {
     return (
       <div>
 
@@ -18,6 +18,6 @@ export default class extends React.Component {
         </div>
 
       </div>
-    )
+    );
   }
 }

@@ -5,9 +5,9 @@ import _userControls from './userControls.jsx';
 
 const UserControls = authComposer(_userControls);
 
-export default React.createClass ({
+export default React.createClass({
 
-  render () {
+  render() {
 
     // const {loggedIn, user, email} = this.props;
 
@@ -19,7 +19,8 @@ export default React.createClass ({
           <div className="container">
 
             <div className="navbar-header">
-              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+              <button type="button" className="navbar-toggle"
+                data-toggle="collapse" data-target=".navbar-inverse-collapse">
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
@@ -42,7 +43,7 @@ export default React.createClass ({
         </div>
       </header>
 
-    )
+    );
   }
 });
 

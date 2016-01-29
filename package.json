@@ -7,7 +7,8 @@
     "lintfix": "npm run lint -- --fix",
     "testonly": "mocha client/**/tests/**/*.js --compilers js:babel-core/register",
     "test": "npm run lint && npm run testonly",
-    "test-watch": "npm run testonly -- --watch --watch-extensions js,jsx"
+    "test-watch": "npm run testonly -- --watch --watch-extensions js,jsx",
+    "dsstore": "find . -name '*.DS_Store' -type f -delete"
   },
   "devDependencies": {
     "babel-core": "6.x.x",

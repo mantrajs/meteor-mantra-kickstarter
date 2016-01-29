@@ -4,7 +4,7 @@ export default React.createClass({
 
   getDefaultProps() {
     return {
-      name : 'noname'
+      name: 'noname'
     };
   },
 

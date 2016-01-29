@@ -4,7 +4,7 @@ import {mount} from 'react-mounter';
 
 import {Layout} from '/client/configs/theme.jsx';
 import Links from '../../_home/components/links.jsx';
-import Simple from '../../_home/components/simple.jsx';
+// import Simple from '../../_home/components/simple.jsx';
 
 import ColorsList from '../components/colors/collection.jsx';
 import ColorsView from '../components/colors/single.jsx';
@@ -21,8 +21,8 @@ export default (injectDeps) => {
     action() {
       mount(LayoutCtx, {
         // content: () => (<Simple name='colors.collection' />)
-        content: () => (<ColorsList />)
-        ,links: () => (<Links />)
+        content: () => (<ColorsList />),
+        links: () => (<Links />)
       });
     }
   });
@@ -32,8 +32,8 @@ export default (injectDeps) => {
     action() {
       mount(LayoutCtx, {
         // content: () => (<Simple name='colors.new' />)
-        content: () => (<ColorsAdd />)
-        ,links: () => (<Links />)
+        content: () => (<ColorsAdd />),
+        links: () => (<Links />)
       });
     }
   });
@@ -43,8 +43,8 @@ export default (injectDeps) => {
     action({_id}) {
       mount(LayoutCtx, {
         // content: () => (<Simple name='colors.single' />)
-        content: () => (<ColorsView _id={_id}/>)
-        ,links: () => (<Links />)
+        content: () => (<ColorsView _id={_id}/>),
+        links: () => (<Links />)
       });
     }
   });
@@ -54,8 +54,8 @@ export default (injectDeps) => {
     action({_id}) {
       mount(LayoutCtx, {
         // content: () => (<Simple name='colors.single' />)
-        content: () => (<ColorsEdit _id={_id}/>)
-        ,links: () => (<Links />)
+        content: () => (<ColorsEdit _id={_id}/>),
+        links: () => (<Links />)
       });
     }
   });

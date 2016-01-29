@@ -2,7 +2,7 @@ import {useDeps} from 'react-simple-di';
 import {composeWithTracker, composeAll} from 'react-komposer';
 
 export const singleComposer = ({context, _id, clearErrors}, onData) => {
-  const {Meteor, Collections, Tracker, LocalState} = context();
+  const {Meteor, Collections, LocalState} = context();
   const error = LocalState.get('_colors.DELETE_ERROR');
   if (Meteor.subscribe('_colors.single', _id).ready()) {
     const record = Collections._colors.findOne(_id);
@@ -18,9 +18,9 @@ export const singleComposer = ({context, _id, clearErrors}, onData) => {
 };
 
 export const depsMapper = (context, actions) => ({
-  deleteAction: actions._colors.delete
-  ,clearErrors: actions._colors.clearErrors
-  ,context: () => context
+  deleteAction: actions._colors.delete,
+  clearErrors: actions._colors.clearErrors,
+  context: () => context
 });
 
 export default (component) => composeAll(

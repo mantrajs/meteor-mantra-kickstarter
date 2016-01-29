@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class extends React.Component {
 
-  render () {
+  render() {
     return (
       <div className="page-header" id="banner">
         <div className="row">
@@ -12,6 +12,6 @@ export default class extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
