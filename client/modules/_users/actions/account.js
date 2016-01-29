@@ -28,13 +28,13 @@ export default {
       return LocalState.set('REGISTER_ERROR', 'Please fill out all the required fileds!');
     }
 
-    if (password1 != password2 ) {
+    if (password1 !== password2 ) {
       return LocalState.set('REGISTER_ERROR', 'Passwords do not match!');
     }
 
     Accounts.createUser({email: email, password: password1}, (err,res) => {
       if (err && err.reason) {
-          return LocalState.set('REGISTER_ERROR', err.reason);
+        return LocalState.set('REGISTER_ERROR', err.reason);
       } else {
         FlowRouter.go('/home');
       }

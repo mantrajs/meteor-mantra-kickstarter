@@ -5,7 +5,7 @@ import t from 'tcomb-form';
 export default React.createClass({
 
   componentLog() {
-    console.log ('ColorsForm->componentLog props', this.props);
+    console.log('ColorsForm->componentLog props', this.props);
   },
 
   submitForm(event) {
@@ -19,8 +19,7 @@ export default React.createClass({
         console.log('submitForm values with id title', values.title);
         this.props.submitAction(values, this.props._id);
       }
-      else
-      {
+      else {
         this.props.submitAction(values);
       }
     }
@@ -58,8 +57,8 @@ export default React.createClass({
 
     const Form = t.form.Form;
 
-    const title = this.props._id ? "Edit: " + record.title : "Add new";
-    const buttonLabel = "Save";
+    const title = this.props._id ? 'Edit: ' + record.title : 'Add new';
+    const buttonLabel = 'Save';
 
 
     return (

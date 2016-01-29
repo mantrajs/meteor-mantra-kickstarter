@@ -4,10 +4,10 @@ import Sidebar from './_sidebar.jsx';
 // import Container from '../../containers/colors/add.jsx';
 import dataComposer from '../../composers/colors/add.jsx';
 import Component from './_form.jsx';
-const Container = dataComposer (Component);
+const Container = dataComposer(Component);
 
 export default class extends React.Component {
-  render () {
+  render() {
     return (
       <div className="row">
         <div className="col-md-3">
@@ -17,6 +17,6 @@ export default class extends React.Component {
           <Container />
         </div>
       </div>
-    )
+    );
   }
 }

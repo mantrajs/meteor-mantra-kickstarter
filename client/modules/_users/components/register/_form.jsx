@@ -17,7 +17,7 @@ import {
 export default React.createClass({
 
   componentDidMount() {
-    console.log ('componentDidMount');
+    console.log('componentDidMount');
     // this.disableButton();
   },
 
@@ -27,26 +27,26 @@ export default React.createClass({
   },
 
   validSubmit(data) {
-    console.log ('validSubmit', data);
-    this.props.submitAction (data.email, data.password1, data.password2);
+    console.log('validSubmit', data);
+    this.props.submitAction(data.email, data.password1, data.password2);
   },
-  invalidSubmit (data) {
-    console.log ('invalidSubmit', data);
+  invalidSubmit(data) {
+    console.log('invalidSubmit', data);
   },
 
   enableButton() {
-    console.log ('enable button');
+    console.log('enable button');
     this.setState({ canSubmit: true });
   },
 
   disableButton() {
-    console.log ('disable button');
+    console.log('disable button');
     this.setState({ canSubmit: false });
   },
 
   getInitialState() {
     return {
-        layout: 'vertical'
+      layout: 'vertical'
         ,validatePristine: true
         ,disabled: false
         ,canSubmit: false
@@ -58,7 +58,7 @@ export default React.createClass({
     let formClassName = 'vertical m-t';
 
     var sharedProps = {
-        layout: this.state.layout
+      layout: this.state.layout
         ,validatePristine: this.state.validatePristine
         ,disabled: this.state.disabled
     };
@@ -119,7 +119,7 @@ export default React.createClass({
 
                 validations="equalsField:password1"
                 validationErrors={{
-                    equalsField: 'Passwords must match.'
+                  equalsField: 'Passwords must match.'
                 }}
 
                 placeholder="Retype password"

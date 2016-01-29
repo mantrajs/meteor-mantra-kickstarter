@@ -2,7 +2,7 @@ export default {
 
   /// create
   add({Meteor, LocalState, FlowRouter}, data) {
-    console.log ('actions._users.add data', data);
+    console.log('actions._users.add data', data);
     // const _id = Meteor.uuid();
 
     const userObject = {
@@ -11,7 +11,7 @@ export default {
         firstName: data.firstName
         ,lastName: data.lastName
       }
-    }
+    };
 
     Meteor.call('_users.add', userObject, (err, response) => {
       if (err) {
@@ -35,7 +35,7 @@ export default {
   },
 
   /// update
-  update ({Meteor, LocalState, FlowRouter}, data, _id) {
+  update({Meteor, LocalState, FlowRouter}, data, _id) {
     // console.log ('actions._users.update _id', _id);
     // console.log ('actions._users.update data', data);
 
@@ -46,14 +46,14 @@ export default {
     });
   },
 
-  delete ({Meteor, LocalState, FlowRouter}, _id) {
-    console.log ('actions._users.delete _id', _id);
-    console.log ('actions._users.delete Meteor.userId()', Meteor.userId());
+  delete({Meteor, LocalState, FlowRouter}, _id) {
+    console.log('actions._users.delete _id', _id);
+    console.log('actions._users.delete Meteor.userId()', Meteor.userId());
 
     Meteor.call('_users.delete', _id, (err) => {
-      if (_id == Meteor.userId()) {
-        console.log ('cant delete self');
-        return LocalState.set('_users.DELETE_ERROR', "Seppuku :-) ");
+      if (_id === Meteor.userId()) {
+        console.log('cant delete self');
+        return LocalState.set('_users.DELETE_ERROR', 'Seppuku :-) ');
       }
       if (err) {
         return LocalState.set('_users.DELETE_ERROR', err.message);

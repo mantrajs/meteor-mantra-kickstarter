@@ -8,7 +8,7 @@ const Container = dataComposer(Component);
 
 export default class extends React.Component {
 
-  render () {
+  render() {
     return (
       <div className="row">
         <div className="col-md-3">
@@ -18,6 +18,6 @@ export default class extends React.Component {
           <Container />
         </div>
       </div>
-    )
+    );
   }
 }

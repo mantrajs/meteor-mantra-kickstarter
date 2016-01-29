@@ -13,7 +13,7 @@ Meteor.methods({
     });
     check(_id, String);
 
-    console.log ('_colors.add data', data);
+    console.log('_colors.add data', data);
 
     // XXX: Do some user authorization
 
@@ -24,31 +24,31 @@ Meteor.methods({
   }
 
   ,'_colors.update'(data, _id) {
-    check(data, {
-      title: String,
-      content: String
-    });
-    check(_id, String);
+     check(data, {
+       title: String,
+       content: String
+     });
+     check(_id, String);
 
     // console.log ('_colors.update _id', _id);
     // console.log ('_colors.update data', data);
 
     // XXX: Do some user authorization
 
-    let record = _colors.findOne(_id);
-    const allowedFields = ['title','content'];
-    allowedFields.forEach(key => record.set(key,data[key]) );
-    record.save(allowedFields);
+     let record = _colors.findOne(_id);
+     const allowedFields = [ 'title','content' ];
+     allowedFields.forEach(key => record.set(key,data[key]) );
+     record.save(allowedFields);
 
     // console.log ('_colors.update record', record);
 
-  }
+   }
 
   ,'_colors.delete'(_id) {
-    check(_id, String);
-    console.log ('_colors.delete _id', _id)
-    let record = _colors.findOne(_id);
-    record.remove();
-  }
+     check(_id, String);
+     console.log('_colors.delete _id', _id);
+     let record = _colors.findOne(_id);
+     record.remove();
+   }
 
 });

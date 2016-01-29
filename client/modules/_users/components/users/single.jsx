@@ -7,7 +7,7 @@ const Container = dataComposer(Component);
 
 export default class extends React.Component {
 
-  render () {
+  render() {
     const {_id} = this.props;
 
     return (
@@ -19,6 +19,6 @@ export default class extends React.Component {
           <Container _id={_id} />
         </div>
       </div>
-    )
+    );
   }
 }

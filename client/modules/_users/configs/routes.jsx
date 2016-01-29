@@ -70,7 +70,7 @@ export default (injectDeps) => {
       // Accounts.logout();
       Meteor.logout(() => {
         FlowRouter.go('/login');
-      })
+      });
     }
   });
 

@@ -9,7 +9,7 @@ export const singleComposer = ({context, _id, clearErrors}, onData) => {
   if (Meteor.subscribe('users.single', _id).ready()) {
     const user = Meteor.users.findOne(_id);
     const email = _.get(user, 'emails[0].address', null);
-    console.log ('composer for single user', user);
+    console.log('composer for single user', user);
     onData(null, {...user.profile, user, email, error});
   }
   // clearErrors when unmounting the component

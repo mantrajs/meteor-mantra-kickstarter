@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class extends React.Component {
 
-  render () {
+  render() {
     return (
       <div className="box box-solid">
         <div className="box-header with-border">
@@ -15,6 +15,6 @@ export default class extends React.Component {
           </ul>
         </div>
       </div>
-    )
+    );
   }
 }

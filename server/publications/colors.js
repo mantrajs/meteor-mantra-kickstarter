@@ -17,7 +17,7 @@ Meteor.publish('_colors.single', function (_id) {
   check( _id, String);
   const selector = {_id: _id};
   const response = _colors.find(selector);
-  console.log ('publish _colors.single _id', _id);
-  console.log ('publish _colors.single response.title', response.title);
+  console.log('publish _colors.single _id', _id);
+  console.log('publish _colors.single response.title', response.title);
   return response;
 });

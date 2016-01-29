@@ -5,7 +5,7 @@ import t from 'tcomb-form';
 export default React.createClass({
 
   componentLog() {
-    console.log ('_forms->componentLog props', this.props);
+    console.log('_forms->componentLog props', this.props);
   },
 
   submitForm(event) {
@@ -16,8 +16,7 @@ export default React.createClass({
       if (this.props._id) {
         this.props.submitAction(values, this.props._id);
       }
-      else
-      {
+      else {
         this.props.submitAction(values);
       }
     }
@@ -58,12 +57,12 @@ export default React.createClass({
 
     const defaultValues = {
       ...this.props
-    }
+    };
 
     const Form = t.form.Form;
 
-    const formTitle = _id ? "Edit " + email : "Add new record";
-    const buttonLabel = "Save";
+    const formTitle = _id ? 'Edit ' + email : 'Add new record';
+    const buttonLabel = 'Save';
 
     return (
       <div>

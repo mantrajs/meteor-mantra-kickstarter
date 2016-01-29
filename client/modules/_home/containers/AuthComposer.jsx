@@ -7,7 +7,7 @@ const AuthComposer = ({context}, onData) => {
   const {Meteor, Collections, Tracker} = context();
 
   if (Meteor.subscribe('users.current').ready()) {
-    const loggedIn = Meteor.userId() ? true: false;
+    const loggedIn = Meteor.userId() ? true : false;
     const user = Meteor.users.findOne(Meteor.userId());
     const email = _.get(user, 'emails[0].address', null);
     onData(null, {loggedIn, user, email});

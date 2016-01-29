@@ -24,9 +24,9 @@ export default React.createClass({
 
   validSubmit(data) {
     // console.log ('validSubmit', data);
-    this.props.submitAction (data.email, data.password1, data.password2);
+    this.props.submitAction(data.email, data.password1, data.password2);
   },
-  invalidSubmit (data) {
+  invalidSubmit(data) {
     // console.log ('invalidSubmit', data);
   },
 
@@ -42,7 +42,7 @@ export default React.createClass({
 
   getInitialState() {
     return {
-        layout: 'vertical'
+      layout: 'vertical'
         ,validatePristine: true
         ,disabled: false
         ,canSubmit: false
@@ -54,7 +54,7 @@ export default React.createClass({
     let formClassName = 'vertical m-t';
 
     var sharedProps = {
-        layout: this.state.layout
+      layout: this.state.layout
         ,validatePristine: this.state.validatePristine
         ,disabled: this.state.disabled
     };
@@ -115,7 +115,7 @@ export default React.createClass({
 
                 validations="equalsField:password1"
                 validationErrors={{
-                    equalsField: 'Passwords must match.'
+                  equalsField: 'Passwords must match.'
                 }}
 
                 placeholder="Retype password"

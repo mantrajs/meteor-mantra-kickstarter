@@ -3,11 +3,11 @@ import Sidebar from './_sidebar.jsx';
 
 import dataComposer from '../../composers/users/edit.jsx';
 import Component from './_form.jsx';
-const Container = dataComposer (Component);
+const Container = dataComposer(Component);
 
 export default class extends React.Component {
 
-  render () {
+  render() {
 
     const {_id} = this.props;
 
@@ -20,6 +20,6 @@ export default class extends React.Component {
           <Container _id={_id} />
         </div>
       </div>
-    )
+    );
   }
 }

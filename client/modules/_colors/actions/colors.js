@@ -13,7 +13,7 @@ export default {
   },
 
   /// update
-  update ({Meteor, LocalState, FlowRouter}, data, _id) {
+  update({Meteor, LocalState, FlowRouter}, data, _id) {
     // console.log ('actions._colors.update _id', _id);
     // console.log ('actions._colors.update data', data);
 
@@ -24,7 +24,7 @@ export default {
     });
   },
 
-  delete ({Meteor, LocalState, FlowRouter}, _id) {
+  delete({Meteor, LocalState, FlowRouter}, _id) {
     // console.log ('actions._colors.update _id', _id);
     // console.log ('actions._colors.update data', data);
 

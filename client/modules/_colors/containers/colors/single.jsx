@@ -6,7 +6,7 @@ import dataComposer from '../../composers/colors/single.jsx';
 
 import Component from '../../components/colors/_single.jsx';
 
-export default dataComposer (Component);
+export default dataComposer(Component);
 
 // export default composeAll(
 //     composeWithTracker(singleComposer),

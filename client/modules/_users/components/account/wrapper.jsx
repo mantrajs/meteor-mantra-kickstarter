@@ -7,7 +7,7 @@ import React from 'react';
 
 export default class extends React.Component {
 
-  render () {
+  render() {
     return (
       <div className="loginColumns">
           <div className="row">
@@ -34,6 +34,6 @@ export default class extends React.Component {
           <hr/>
       </div>
 
-    )
+    );
   }
 }

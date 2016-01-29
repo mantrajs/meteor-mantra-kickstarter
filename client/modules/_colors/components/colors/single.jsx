@@ -4,11 +4,11 @@ import Sidebar from './_sidebar.jsx';
 // import Container from '../../containers/colors/single.jsx';
 import dataComposer from '../../composers/colors/single.jsx';
 import Component from './_single.jsx';
-const Container = dataComposer (Component);
+const Container = dataComposer(Component);
 
 export default class extends React.Component {
 
-  render () {
+  render() {
     const {_id} = this.props;
     return (
       <div className="row">
@@ -19,6 +19,6 @@ export default class extends React.Component {
           <Container _id={_id}/>
         </div>
       </div>
-    )
+    );
   }
 }
