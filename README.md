@@ -31,7 +31,7 @@ Please make sure you read [Mantra Specification](https://kadirahq.github.io/mant
 
 ![screen login](public/screens/login.png)
 
-![screen password](public/screens/login.png)
+![screen password](public/screens/password.png)
 
 ![screen users-collection](public/screens/users.collection.png)
 
