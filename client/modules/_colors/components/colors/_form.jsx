@@ -41,7 +41,7 @@ export default React.createClass({
         content: {
           type: 'textarea',
           attrs: {
-            rows: 3
+            rows: 8
           }
         }
       }

@@ -9,7 +9,7 @@ export default class extends React.Component {
 
   render() {
     return (
-      <div className="loginColumns">
+      <div className="bs-docs-section clearfix">
           <div className="row">
 
               <div className="col-md-6">

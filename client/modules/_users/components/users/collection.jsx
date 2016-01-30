@@ -10,12 +10,14 @@ export default class extends React.Component {
 
   render() {
     return (
-      <div className="row">
-        <div className="col-md-3">
-          <Sidebar />
-        </div>
-        <div className="col-md-9">
-          <Container />
+      <div className="bs-docs-section clearfix">
+        <div className="row">
+          <div className="col-md-3">
+            <Sidebar />
+          </div>
+          <div className="col-md-9">
+            <Container />
+          </div>
         </div>
       </div>
     );

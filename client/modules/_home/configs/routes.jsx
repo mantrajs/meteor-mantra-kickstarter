@@ -5,6 +5,7 @@ import {mount} from 'react-mounter';
 import {Layout} from '/client/configs/theme.jsx';
 import Links from '../components/links.jsx';
 import Simple from '../components/simple.jsx';
+import Homepage from '../components/homepageWrapper.jsx';
 
 export default (injectDeps) => {
 
@@ -15,7 +16,7 @@ export default (injectDeps) => {
     name: 'home',
     action() {
       mount(LayoutCtx, {
-        content: () => (<Simple name='/approot'/>),
+        content: () => (<Homepage />),
         links: () => (<Links />)
       });
     }

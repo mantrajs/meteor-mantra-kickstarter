@@ -14,7 +14,11 @@ export default class extends React.Component {
         </Navheader>
 
         <div className="container">
-          {this.props.content()}
+
+
+            {this.props.content()}
+
+
         </div>
 
       </div>
