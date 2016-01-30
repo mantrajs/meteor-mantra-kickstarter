@@ -4,41 +4,37 @@ import t from 'tcomb-form';
 
 export default React.createClass({
 
-  componentLog() {
-    console.log('_forms->componentLog props', this.props);
-  },
 
   submitForm(event) {
     event.preventDefault();
     var values = this.refs.form.getValue();
     if (values) {
-      console.log('submitForm values', values);
+      // console.log('submitForm values', values);
       if (this.props._id) {
         this.props.submitAction(values, this.props._id);
-      }
-      else {
+      } else {
         this.props.submitAction(values);
       }
     }
   },
 
-  onChange(value) {
+  onChange() {
     this.refs.form.getValue(); // <- validate on every change
   },
 
   render() {
 
     const formModel = t.struct({
-      firstName: t.String
-      ,lastName: t.String
-      ,email: t.String
+      firstName: t.String,
+      lastName: t.String,
+      email: t.String
       // ,content: t.maybe(t.String)
     });
 
     const formOptions = {
       config: {
-      }
-      ,fields: {
+      },
+      fields: {
         // title : {
         //
         // }
@@ -53,7 +49,8 @@ export default React.createClass({
     };
 
     const debug = true;
-    const {_id, error, record, email } = this.props;
+    // const {_id, error, record, email } = this.props;
+    const {_id, error, email } = this.props;
 
     const defaultValues = {
       ...this.props

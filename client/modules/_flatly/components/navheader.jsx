@@ -9,8 +9,6 @@ export default React.createClass({
 
   render() {
 
-    // const {loggedIn, user, email} = this.props;
-
     return (
 
       <header className="main-header">
@@ -46,10 +44,3 @@ export default React.createClass({
     );
   }
 });
-
-// export default authComposer(LayoutHeader);
-
-// export default composeAll(
-//   composeWithTracker(AuthComposer)
-//   ,useDeps()
-// )(LayoutHeader);

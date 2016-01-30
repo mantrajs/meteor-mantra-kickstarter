@@ -4,10 +4,12 @@ import _ from 'lodash';
 
 const composer = ({context}, onData) => {
 
-  const {Meteor, Collections, Tracker} = context();
+  const {Meteor} = context();
 
   if (Meteor.subscribe('users.current').ready()) {
-    const loggedIn = Meteor.userId() ? true : false;
+    // const loggedIn = Meteor.userId() ? true : false;
+    // const loggedIn = Meteor.userId() === true;
+    const loggedIn = Meteor.userId() || false;
     const user = Meteor.users.findOne(Meteor.userId());
     const email = _.get(user, 'emails[0].address', null);
     // const email = user.firstEmail();

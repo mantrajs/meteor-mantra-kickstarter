@@ -1,55 +1,50 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import Formsy from 'formsy-react';
 import {
-  Checkbox,
-  CheckboxGroup,
+  // Checkbox,
+  // CheckboxGroup,
   Input,
-  RadioGroup,
+  // RadioGroup,
   Row,
-  Select,
-  File,
-  Textarea
+  // Select,
+  // File,
+  // Textarea
 
 } from 'formsy-react-components';
 
 export default React.createClass({
 
-  componentDidMount() {
-    console.log('componentDidMount');
-    // this.disableButton();
-  },
-
   resetForm() {
-    console.log('resetForm');
     this.refs.form.reset();
   },
 
   validSubmit(data) {
-    console.log('validSubmit', data);
+    // console.log('validSubmit', data);
     this.props.submitAction(data.email, data.password);
   },
-  invalidSubmit(data) {
-    console.log('invalidSubmit', data);
+
+  // invalidSubmit(data) {
+  invalidSubmit() {
+    // console.log('invalidSubmit', data);
   },
 
   enableButton() {
-    console.log('enable button');
+    // console.log('enable button');
     this.setState({ canSubmit: true });
   },
 
   disableButton() {
-    console.log('disable button');
+    // console.log('disable button');
     this.setState({ canSubmit: false });
   },
 
   getInitialState() {
     return {
-      layout: 'vertical'
-        ,validatePristine: true
-        ,disabled: false
-        ,canSubmit: false
+      layout: 'vertical',
+      validatePristine: true,
+      disabled: false,
+      canSubmit: false
     };
   },
 
@@ -58,9 +53,9 @@ export default React.createClass({
     let formClassName = 'vertical m-t';
 
     var sharedProps = {
-      layout: this.state.layout
-        ,validatePristine: this.state.validatePristine
-        ,disabled: this.state.disabled
+      layout: this.state.layout,
+      validatePristine: this.state.validatePristine,
+      disabled: this.state.disabled
     };
 
     const {error} = this.props;

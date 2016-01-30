@@ -15,8 +15,8 @@ export default (injectDeps) => {
     name: 'home',
     action() {
       mount(LayoutCtx, {
-        content: () => (<Simple name='/approot'/>)
-        ,links: () => (<Links />)
+        content: () => (<Simple name='/approot'/>),
+        links: () => (<Links />)
       });
     }
   });
@@ -25,8 +25,8 @@ export default (injectDeps) => {
     name: 'home',
     action() {
       mount(LayoutCtx, {
-        content: () => (<Simple name='home container'/>)
-        ,links: () => (<Links />)
+        content: () => (<Simple name='home container'/>),
+        links: () => (<Links />)
       });
     }
   });

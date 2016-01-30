@@ -15,7 +15,7 @@ Meteor.publish('users.collection', function () {
 
 Meteor.publish('users.single', function (_id) {
   check(_id, String);
-  const selector = {_id: _id};
+  const selector = {_id};
   const response = Meteor.users.find(selector);
   // console.log ('publish users.single _id', _id);
   // console.log ('publish users.single response', response);
@@ -25,7 +25,7 @@ Meteor.publish('users.single', function (_id) {
 Meteor.publish('users.current', function (_id) {
   // check(_id, String);
   // if (this.userId) {
-  const selector = {_id: _id};
+  const selector = {_id};
   const response = Meteor.users.find(selector);
   // console.log ('publish users.current _id', _id);
   // console.log ('publish users.current this.userId', this.userId);

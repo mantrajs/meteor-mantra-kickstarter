@@ -4,7 +4,7 @@ import React from 'react';
 
 export default class extends React.Component {
   deleteRecord() {
-    console.log('deleteRecord ', this.props._id);
+    // console.log('deleteRecord ', this.props._id);
     this.props.deleteAction(this.props._id);
   }
 

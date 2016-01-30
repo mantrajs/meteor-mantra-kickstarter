@@ -1,10 +1,11 @@
 import React from 'react';
 import {FlowRouter} from 'meteor/kadira:flow-router';
 import {mount} from 'react-mounter';
+import {Meteor} from 'meteor/meteor';
 
 import {Layout} from '/client/configs/theme.jsx';
 import Links from '../../_home/components/links.jsx';
-import Simple from '../../_home/components/simple.jsx';
+// import Simple from '../../_home/components/simple.jsx';
 
 import Login from '../components/login/wrapper.jsx';
 import Register from '../components/register/wrapper.jsx';
@@ -28,11 +29,13 @@ export default (injectDeps) => {
     name: 'users.register',
     action() {
 
-      if (Meteor.userId()) FlowRouter.go('/profile');
+      if (Meteor.userId()) {
+        FlowRouter.go('/profile');
+      }
 
       mount(LayoutCtx, {
-        content: () => (<Register />)
-        ,links: () => (<Links />)
+        content: () => (<Register />),
+        links: () => (<Links />)
       });
 
     }
@@ -42,11 +45,13 @@ export default (injectDeps) => {
     name: 'users.password',
     action() {
 
-      if (Meteor.userId()) FlowRouter.go('/profile');
+      if (Meteor.userId()) {
+        FlowRouter.go('/profile');
+      }
 
       mount(LayoutCtx, {
-        content: () => (<Password />)
-        ,links: () => (<Links />)
+        content: () => (<Password />),
+        links: () => (<Links />)
       });
     }
   });
@@ -55,11 +60,13 @@ export default (injectDeps) => {
     name: 'users.login',
     action() {
 
-      if (Meteor.userId()) FlowRouter.go('/profile');
+      if (Meteor.userId()) {
+        FlowRouter.go('/profile');
+      }
 
       mount(LayoutCtx, {
-        content: () => (<Login />)
-        ,links: () => (<Links />)
+        content: () => (<Login />),
+        links: () => (<Links />)
       });
     }
   });
@@ -78,11 +85,13 @@ export default (injectDeps) => {
     name: 'users.account',
     action() {
 
-      if (!Meteor.userId()) FlowRouter.go('/login');
+      if (!Meteor.userId()) {
+        FlowRouter.go('/login');
+      }
 
       mount(LayoutCtx, {
-        content: () => (<Account />)
-        ,links: () => (<Links />)
+        content: () => (<Account />),
+        links: () => (<Links />)
       });
     }
   });
@@ -91,11 +100,13 @@ export default (injectDeps) => {
     name: 'users.profile',
     action() {
 
-      if (!Meteor.userId()) FlowRouter.go('/login');
+      if (!Meteor.userId()) {
+        FlowRouter.go('/login');
+      }
 
       mount(LayoutCtx, {
-        content: () => (<Profile name='users.profile'/>)
-        ,links: () => (<Links />)
+        content: () => (<Profile name='users.profile'/>),
+        links: () => (<Links />)
       });
     }
   });
@@ -104,11 +115,13 @@ export default (injectDeps) => {
     name: 'users.collection',
     action() {
 
-      if (!Meteor.userId()) FlowRouter.go('/login');
+      if (!Meteor.userId()) {
+        FlowRouter.go('/login');
+      }
 
       mount(LayoutCtx, {
-        content: () => <UsersCollection />
-        ,links: () => (<Links />)
+        content: () => (<UsersCollection />),
+        links: () => (<Links />)
       });
     }
   });
@@ -117,11 +130,13 @@ export default (injectDeps) => {
     name: 'users.add',
     action() {
 
-      if (!Meteor.userId()) FlowRouter.go('/login');
+      if (!Meteor.userId()) {
+        FlowRouter.go('/login');
+      }
 
       mount(LayoutCtx, {
-        content: () => <UsersAdd />
-        ,links: () => (<Links />)
+        content: () => (<UsersAdd />),
+        links: () => (<Links />)
       });
     }
   });
@@ -130,12 +145,14 @@ export default (injectDeps) => {
     name: '_users.usersSingle',
     action({_id}) {
 
-      if (!Meteor.userId()) FlowRouter.go('/login');
+      if (!Meteor.userId()) {
+        FlowRouter.go('/login');
+      }
 
       mount(LayoutCtx, {
         // content: () => (<Simple name='colors.single' />)
-        content: () => (<UsersSingle _id={_id}/>)
-        ,links: () => (<Links />)
+        content: () => (<UsersSingle _id={_id}/>),
+        links: () => (<Links />)
       });
     }
   });
@@ -144,15 +161,15 @@ export default (injectDeps) => {
     name: '_users.usersEdit',
     action({_id}) {
 
-      if (!Meteor.userId()) FlowRouter.go('/login');
+      if (!Meteor.userId()) {
+        FlowRouter.go('/login');
+      }
 
       mount(LayoutCtx, {
         // content: () => (<Simple name='colors.single' />)
-        content: () => (<UsersEdit _id={_id}/>)
-        ,links: () => (<Links />)
+        content: () => (<UsersEdit _id={_id}/>),
+        links: () => (<Links />)
       });
     }
   });
-
-
 };
