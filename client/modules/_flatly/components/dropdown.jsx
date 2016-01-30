@@ -8,7 +8,7 @@ export default ({links = [], name = 'Empty name'}) => (
     <ul className="dropdown-menu" >
 
       {
-        links.map((link) => {
+        links.map((link, index) => {
           link.classes = link.classes ? link.classes : {};
           link.url = link.url ? link.url : '';
           link.name = link.name ? link.name : '';
@@ -16,9 +16,9 @@ export default ({links = [], name = 'Empty name'}) => (
 
           let response = '';
           if (link.url) {
-            response = <li><a href={link.url}>{link.name}</a></li>;
+            response = <li key={index}><a href={link.url}>{link.name}</a></li>;
           } else {
-            response = <li>{link.name}</li>;
+            response = <li key={index}>{link.name}</li>;
           }
           return response;
         })
