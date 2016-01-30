@@ -69,7 +69,7 @@
     "linebreak-style": 2,
     "lines-around-comment": 0,
     "max-depth": 0,
-    "max-len": [2, 100, 4],
+    "max-len": [2, 150, 4],
     "max-nested-callbacks": 0,
     "max-params": 0,
     "max-statements": 0,
