@@ -1,0 +1,4 @@
+**/*.min.js
+client/modules/_users/actions/account.js
+server/configs/initial_users.js
+server/methods/users.js
