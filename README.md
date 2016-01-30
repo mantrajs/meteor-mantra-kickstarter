@@ -22,24 +22,32 @@ Please make sure you read [Mantra Specification](https://kadirahq.github.io/mant
 
 * [meteor astronomy](https://github.com/jagi/meteor-astronomy) models (looking forward to the upcoming v2)
 
-* bootstrap theme module based on [Flatly](https://bootswatch.com/flatly/)
-
-* A theme module based on the [AdminLTE Control Panel Template] (https://almsaeedstudio.com/), you can replace it or remove if
-you have other requirements
+* bootstrap theme module based on [Flatly](https://bootswatch.com/flatly/) with a configuration file, you can replace it or remove if you have other requirements
 
 
+![screen homepage](public/screens/homepage.png)
 
-![screen login](public/screens/screen-login.png)
+![screen register](public/screens/register.png)
 
-![screen register](public/screens/screen-register.png)
+![screen login](public/screens/login.png)
 
-![screen theme](public/screens/screen-theme.png)
+![screen password](public/screens/login.png)
+
+![screen users-collection](public/screens/users.collection.png)
+
+![screen users-add](public/screens/users.add.png)
+
+![screen colors-collection](public/screens/colors.collection.png)
+
+![screen colors-add](public/screens/colors.add.png)
+
+![screen colors-single](public/screens/colors.single.png)
 
 ### Setting Up
 
-* make sure you've installed Meteor locally
-* Clone this repo
-* make sure you are on branch mantra-modules-experiment-02
+* make sure you have Meteor installed
+* clone this repo
+* make sure you are on mantra-modules-experiment-02 branch
 
 ```
 npm install
