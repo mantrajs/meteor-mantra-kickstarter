@@ -21,7 +21,7 @@ export default function () {
 
       // XXX: Do some user authorization
 
-      const _idNew = Accounts.createUser({email: data.email, password: 'test1234'});
+      const _idNew = Accounts.createUser({email: data.email, password: 'test1234', profile: data.profile});
       // console.log('new user created with _id_new', _id_new);
 
       return { _idNew };
