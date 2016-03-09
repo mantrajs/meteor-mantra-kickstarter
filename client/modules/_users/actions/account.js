@@ -36,7 +36,7 @@ export default {
       if (err && err.reason) {
         return LocalState.set('REGISTER_ERROR', err.reason);
       }
-      FlowRouter.go('/home');
+      FlowRouter.go('/');
     });
   },
 
