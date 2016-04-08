@@ -1,5 +1,5 @@
-// import posts from './posts';
+import model from './model';
 
 export default function (context) {
-  // posts(context);
+  model(context);
 }
