@@ -38,7 +38,8 @@ export const _authComposer = ({context}, onData) => {
 
 };
 
-export const _authDepsMapper = (context, actions) => ({
+export const _authDepsMapper = (context) => ({
+// export const _authDepsMapper = (context, actions) => ({
   // toggleLoadDummyData: actions.Developer.toggleLoadDummyData,
   // toggleDeveloperMode: actions.Developer.toggleDeveloperMode,
   context: () => context

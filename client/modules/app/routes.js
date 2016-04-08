@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'react-mounter';
-
+import {Accounts} from 'meteor/accounts-base';
 
 import {
   AuthCheck,
@@ -57,10 +57,10 @@ export default function (injectDeps, {FlowRouter}) {
   FlowRouter.route('/logout', {
     name: 'app.logout',
     action() {
-      // Accounts.logout();
-      Meteor.logout(() => {
-        FlowRouter.go('/login');
-      });
+      Accounts.logout();
+      // Meteor.logout(() => {
+      FlowRouter.go('/login');
+      // });
     }
   });
 

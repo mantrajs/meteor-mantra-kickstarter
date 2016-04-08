@@ -1,7 +1,7 @@
-// import {Accounts} from 'meteor/meteor';
+
 export default {
 
-  login({Meteor, LocalState, FlowRouter}, email, password) {
+  login({Meteor, LocalState, FlowRouter, Accounts}, email, password) {
 
     if (!email || !password) {
       return LocalState.set('LOGIN_ERROR', 'Login & Password are required!');
@@ -22,7 +22,7 @@ export default {
     return LocalState.set('LOGIN_ERROR', null);
   },
 
-  register({Meteor, LocalState, FlowRouter}, email, password1, password2) {
+  register({Meteor, LocalState, FlowRouter, Accounts}, email, password1, password2) {
 
     if (!email || !password1 || !password2) {
       return LocalState.set('REGISTER_ERROR', 'Please fill out all the required fileds!');

@@ -14,12 +14,12 @@ export const _navHeaderComposer = ({context}, onData) => {
   } = authCommon();
 
   const LoadDummyData = LocalState.get('Developer.LoadDummyData');
-  const DeveloperMode = LocalState.get('Developer.DeveloperMode');
+  // const DeveloperMode = LocalState.get('Developer.DeveloperMode');
 
   if (LoadDummyData) {
     onData(null, {
-      notifications,
-      projectlist
+      // notifications,
+      // projectlist
     });
   } else {
 
@@ -34,7 +34,8 @@ export const _navHeaderComposer = ({context}, onData) => {
   }
 };
 
-export const _depsMapper = (context, actions) => ({
+// export const _depsMapper = (context, actions) => ({
+export const _depsMapper = (context) => ({
   context: () => context
 });
 
