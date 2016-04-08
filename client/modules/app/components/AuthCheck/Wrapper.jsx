@@ -44,6 +44,7 @@ export default class extends React.Component {
 
     return (
       <ComponentCtx
+        {...this.props}
         displayLoading={displayLoading}
         displayLogin={displayLogin}
         displayDenied={displayDenied}

@@ -41,6 +41,7 @@ export default function (injectDeps, {FlowRouter}) {
     action() {
       mount(AuthCheckCtx, {
         LayoutDefault, content: () => (<Register />),
+        requireNotLoggedIn: true
       });
     }
   });
@@ -50,6 +51,7 @@ export default function (injectDeps, {FlowRouter}) {
     action() {
       mount(AuthCheckCtx, {
         LayoutDefault, content: () => (<Login />),
+        requireNotLoggedIn: true
       });
     }
   });
