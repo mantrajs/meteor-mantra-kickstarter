@@ -14,6 +14,7 @@ export default class extends React.Component {
     let navColors = React.createElement(DropDown, {name: 'Colors', links: links2});
 
     var links4 = [];
+    links4.push({url: '/admin', name: '/admin'} );
     links4.push({url: '/users', name: '/users'} );
     links4.push({url: '/users/add', name: '/users/add'} );
     let navAdmin = React.createElement(DropDown, {name: 'Admin', links: links4});
