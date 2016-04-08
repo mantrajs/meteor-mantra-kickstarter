@@ -9,7 +9,7 @@ import NewPost from './containers/newpost';
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(MainLayout);
 
-  FlowRouter.route('/', {
+  FlowRouter.route('/blog', {
     name: 'posts.list',
     action() {
       mount(MainLayoutCtx, {

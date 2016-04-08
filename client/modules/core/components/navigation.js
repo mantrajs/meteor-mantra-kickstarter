@@ -4,7 +4,8 @@ const Navigation = () => (
   <div>
     <b> Navigation: </b>
     <a href="/">Home</a> |
-    <a href="/new-post">New Post</a>
+    <a href="/blog">Blog</a>
+    <a href="/new-post">New Post</a> |
   </div>
 );
 
