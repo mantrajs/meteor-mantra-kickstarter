@@ -27,20 +27,19 @@
     "jsdom": "^9.11.0"
   },
   "dependencies": {
+    "bcrypt": "^1.0.2",
+    "classnames": "2.2.5",
     "domready": "^1.0.8",
+    "formsy-react": "0.19.2",
+    "formsy-react-components": "0.10.1",
+    "lodash": "4.17.4",
     "mantra-core": "^1.2.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-mounter": "^1.0.0"
-
-    ,"classnames": "2.2.5"
-    ,"lodash": "4.17.4"
-    ,"formsy-react": "0.19.2"
-    ,"formsy-react-components": "0.10.1"
-    ,"tcomb-form": "0.9.12"
-    ,"react-tagsinput": "3.15.1"
-    ,"react-select": "1.0.0-rc.3"
-    
+    "react-mounter": "^1.0.0",
+    "react-select": "1.0.0-rc.3",
+    "react-tagsinput": "3.15.1",
+    "tcomb-form": "0.9.12"
   },
   "private": true
 }
